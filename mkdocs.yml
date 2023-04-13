@@ -1,0 +1,37 @@
+site_name: CommonGAS
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: blue
+      accent: gray 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: dark-purple
+      accent: white
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/SgXJJsja67
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@creationartstudios8279
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a>      
