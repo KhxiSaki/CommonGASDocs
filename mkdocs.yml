@@ -15,17 +15,17 @@ theme:
   language: en
   palette:
     - scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/brightness-7
         name: Switch to dark mode
-      primary: blue
-      accent: gray 
-    - scheme: slate 
+    - scheme: slate
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode    
-      primary: dark-purple
-      accent: white
+        icon: material/brightness-4
+        name: Switch to light mode
 
 extra:
   social:
@@ -38,7 +38,11 @@ copyright: |
   &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a> 
 
 nav:
-    - Home: 'index.md'
+    - 'Home':
+       - 'Overview' :  'index.md'
+       - 'Installation' :  'installation.md'
+       - 'Setup' :  'setup.md'
+
     - 'ModularGameplayActors': 
        - 'Common Modular Character': 'commonmodularcharacter.md'
        - 'Common Modular Pawn': 'commonmodularpawn.md'
@@ -99,7 +103,7 @@ nav:
        - 'CommonInputConfig' : 'commoninputconfig.md'
        - 'CommonPlayerControlsComponent' : 'commonplayercontrolscomponent.md'
 
-
+# Plugins
 plugins:
-    - search
-    - mkdocs-video
+  - search
+  - mkdocs-video
