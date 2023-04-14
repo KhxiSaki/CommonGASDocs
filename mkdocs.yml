@@ -33,9 +33,6 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@creationartstudios8279
 
-plugins:
-    - mkdocs-video
-
 copyright: |
   &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a>      
 
