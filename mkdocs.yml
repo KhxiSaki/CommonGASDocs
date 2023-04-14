@@ -1,8 +1,5 @@
 site_name: CommonGAS
 
-plugins:
-  - search
-
 theme:
   name: material
   features:
@@ -101,3 +98,8 @@ nav:
        - 'CommonEnhancedInputComponent' : 'commonenhancedinputcomponent.md'
        - 'CommonInputConfig' : 'commoninputconfig.md'
        - 'CommonPlayerControlsComponent' : 'commonplayercontrolscomponent.md'
+
+
+plugins:
+    - search
+    - mkdocs-video
