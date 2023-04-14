@@ -1,4 +1,10 @@
 site_name: CommonGAS
+
+plugins:
+  - ezlinks:
+      wikilinks: true
+  - search
+
 theme:
   name: material
   features:
@@ -34,13 +40,7 @@ extra:
       link: https://www.youtube.com/@creationartstudios8279
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a>      
-
-plugins:
-  - search
-  - ezlinks:
-      wikilinks: true
-
+  &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a> 
 
 nav:
     - Home: 'index.md'
