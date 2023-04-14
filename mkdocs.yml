@@ -37,7 +37,6 @@ copyright: |
   &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a>      
 
 plugins:
-  - mkdocs-video
   - search
   - ezlinks:
       wikilinks: true

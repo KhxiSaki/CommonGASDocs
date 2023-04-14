@@ -14,7 +14,7 @@ The Gameplay Ability System is a highly flexible framework for building the type
 `` [Offical Documentation](https://docs.unrealengine.com/en-US/gameplay-ability-system-for-unreal-engine/)
 
 Product Overview
-![type:video](https://www.youtube.com/embed/LXb3EKWsInQ)
+
 
 # How to contact us:
 - Discord: [LINK](https://discord.gg/SGSsTqKS)
