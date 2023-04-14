@@ -1,8 +1,6 @@
 site_name: CommonGAS
 
 plugins:
-  - ezlinks:
-      wikilinks: true
   - search
 
 theme:
