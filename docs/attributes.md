@@ -1,0 +1,5 @@
+
+The Gameplay Ability System uses Gameplay Attributes (FGameplayAttribute) to store, calculate, and modify gameplay-related floating-point values. These values can describe any trait of their owners, such as a character's remaining health points, a vehicle's top speed, or the number of times an item can be used before it breaks. Actors in the Gameplay Ability System store their Gameplay Attributes in an Attribute Set, which helps to manage interactions between Gameplay Attributes and other parts of the system, and registers itself with the Actor's Ability System Component. These interactions include clamping to value ranges, performing calculations that apply temporary value changes, and reacting to events that permanently alter their base values.(taken from Epic’s Documentation)
+Attribute Set Gameplay Events ( Coming Soon)
+
+Work In Progress!!

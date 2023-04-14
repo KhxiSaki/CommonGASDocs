@@ -33,8 +33,77 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@creationartstudios8279
 
+plugins:
+    - mkdocs-video
+
 copyright: |
   &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a>      
 
 plugins:
-    - mkdocs-video
+  - mkdocs-video
+  - search
+  - ezlinks:
+      wikilinks: true
+
+
+nav:
+    - Home: 'index.md'
+    - 'ModularGameplayActors': 
+       - 'Common Modular Character': 'commonmodularcharacter.md'
+       - 'Common Modular Pawn': 'commonmodularpawn.md'
+       - 'Common Modular Player Controller': 'commonmodularplayercontroller.md'
+       - 'Common Modular AI Controller': 'commonmodularaicontroller.md'
+       - 'Common Modular Actor': 'commonmodularactor.md'
+       - 'Common Modular GameMode': 'commonmodulargamemode.md'
+       - 'Common Modular GameState': 'commonmodulargamestate.md'
+
+    - 'Gameplay Abilities':
+        - 'CommonGameplayAbility': 'commongameplayability.md'
+        - 'Attribute Set': 'attributes.md'
+        - 'Common Ability Set' : 'commonabilityset.md'
+        - 'Common Ability Tag Relationship Mapping' : 'commonabilitytagrelationshipmapping.md'
+        - 'Common Ability Types' : 'commonabilitytypes.md'
+        - 'Common Gameplay Tags' : 'commongameplaytag.md'
+        - 'Common Target Type' : 'commontargettype.md'
+        - 'CommonAbilitySystemComponent': 'commonabilitysystemcomponent.md'
+        - 'CommonExtensionComponent': 'commonextensioncomponent.md'
+        - 'CommonAbilityQueueComponent': 'commonabilityqueuecomponent.md'
+        - 'CommonAbilitySystemLibrary' : 'commonabilitysystemlibrary.md'
+        - 'CommonGameplayTagLibrary' : 'commongameplaytaglibrary.md'
+
+    - 'Gameplay Effects':
+      - 'Gameplay Attributes': 'attributes.md'
+      - 'Common Attribute Set': 'commonattributeset.md'
+      - 'Common Attribute Set Base': 'commonattributesetbase.md'
+      - 'CommonModMagnitudeCalculation': 'commonmodmagnitudecalculation.md'
+      - 'CommonGameplayCueFunctionLibrary' : 'commongameplaycuefunctionlibrary.md'
+      - 'CommonGameplayEffectLibrary' : 'commongameplayeffectlibrary.md'
+
+    - 'Artificial Intelligence':
+      - 'State Tree': 'StateTree.md'
+      - 'AIModule': 'aimodule.md'
+
+    - 'Gameplay Tasks':
+      - 'PlayMontageAndWaitForEvent': 'playmontageandwaitforevent.md'
+
+    - 'Animation':
+      - 'CommonAnimInstance': 'commonaniminstance.md'
+
+    - 'GameFeatures':
+      - 'GameFeatureAction_AddAbilities': 'gamefeatureaction_addabilities.md'
+      - 'GameFeatureAction_AddInputContextMapping': 'gamefeatureaction_addinputcontextmapping.md'
+      - 'GameFeatureAction_AddWorldSystem': 'gamefeatureaction_addworldsystem.md'
+      - 'GameFeatureAction_WorldActionBase': 'gamefeatureaction_worldactionbase.md'
+
+    - 'Messaging':
+       - 'GameplayMessageRouter' : 'gameplaymessagerouter.md'
+       - 'GameplayMessageProcessor' : 'gameplaymessageprocessor.md'
+       - 'AsyncAction_ListenForGameplayMessage' : 'asyncaction_listenforgameplaymessage.md'
+       - 'GameplayMessageSubsystem' : 'gameplaymessagesubsystem.md'
+       - 'GameplayMessageTypes2' : 'gameplaymessagetypes2.md'
+
+    - 'Input':
+       - 'CommonAbilityInputBindingComponent' : 'commonabilityinputbindingcomponent.md'
+       - 'CommonEnhancedInputComponent' : 'commonenhancedinputcomponent.md'
+       - 'CommonInputConfig' : 'commoninputconfig.md'
+       - 'CommonPlayerControlsComponent' : 'commonplayercontrolscomponent.md'
