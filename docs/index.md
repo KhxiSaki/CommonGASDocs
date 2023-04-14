@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 7
 slug: /
 ---
 
@@ -14,6 +14,7 @@ The Gameplay Ability System is a highly flexible framework for building the type
 `` [Offical Documentation](https://docs.unrealengine.com/en-US/gameplay-ability-system-for-unreal-engine/)
 
 Product Overview
+
 ![type:video](https://www.youtube.com/embed/R66iJSezpEA)
 
 # How to contact us:
