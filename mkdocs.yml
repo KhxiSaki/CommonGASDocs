@@ -70,7 +70,6 @@ nav:
       - 'How to use AttributeSet': 'attributes.md'
       - 'Common Attribute Set': 'commonattributeset.md'
       - 'CommonModMagnitudeCalculation': 'commonmodmagnitudecalculation.md'
-      - 'CommonGameplayCueFunctionLibrary' : 'commongameplaycuefunctionlibrary.md'
       - 'CommonGameplayEffectLibrary' : 'commongameplayeffectlibrary.md'
 
     - 'Artificial Intelligence':
