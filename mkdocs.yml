@@ -42,6 +42,7 @@ nav:
        - 'Overview' :  'index.md'
        - 'Installation' :  'installation.md'
        - 'Setup' :  'setup.md'
+       - 'Tutorials' :  'tutorials.md'
 
     - 'ModularGameplayActors': 
        - 'Common Modular Character': 'commonmodularcharacter.md'
@@ -49,12 +50,11 @@ nav:
        - 'Common Modular Player Controller': 'commonmodularplayercontroller.md'
        - 'Common Modular AI Controller': 'commonmodularaicontroller.md'
        - 'Common Modular Actor': 'commonmodularactor.md'
-       - 'Common Modular GameMode': 'commonmodulargamemode.md'
-       - 'Common Modular GameState': 'commonmodulargamestate.md'
+       - 'Common Modular PlayerState': 'commonmodularplayerstate.md'
 
     - 'Gameplay Abilities':
+        - 'How-to Gameplay Ability': 'howtogameplayability.md'
         - 'CommonGameplayAbility': 'commongameplayability.md'
-        - 'Attribute Set': 'attributes.md'
         - 'Common Ability Set' : 'commonabilityset.md'
         - 'Common Ability Tag Relationship Mapping' : 'commonabilitytagrelationshipmapping.md'
         - 'Common Ability Types' : 'commonabilitytypes.md'
@@ -67,9 +67,8 @@ nav:
         - 'CommonGameplayTagLibrary' : 'commongameplaytaglibrary.md'
 
     - 'Gameplay Effects':
-      - 'Gameplay Attributes': 'attributes.md'
+      - 'How to use AttributeSet': 'attributes.md'
       - 'Common Attribute Set': 'commonattributeset.md'
-      - 'Common Attribute Set Base': 'commonattributesetbase.md'
       - 'CommonModMagnitudeCalculation': 'commonmodmagnitudecalculation.md'
       - 'CommonGameplayCueFunctionLibrary' : 'commongameplaycuefunctionlibrary.md'
       - 'CommonGameplayEffectLibrary' : 'commongameplayeffectlibrary.md'
@@ -79,6 +78,7 @@ nav:
       - 'AIModule': 'aimodule.md'
 
     - 'Gameplay Tasks':
+      - 'How-to AbilityTask': 'howtoabilitytask.md'
       - 'PlayMontageAndWaitForEvent': 'playmontageandwaitforevent.md'
 
     - 'Animation':

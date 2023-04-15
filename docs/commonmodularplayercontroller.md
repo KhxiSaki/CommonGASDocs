@@ -1,6 +1,12 @@
-# Common Modular Player Controller
+Minimal class that supports extension by game feature plugins
 
-## Class Defaults
+This class is meant to be use with ``UCommonModularCharacter``
 
+## C++ API
+
+Name                           | Functionality
+-------------------------------| ------------------
+GetCommonPlayerState           | Getter to get CommonPlayerState
+GetCommonAbilitySystemComponent| Getter to get CommonAbilitySystemComponent
 
 

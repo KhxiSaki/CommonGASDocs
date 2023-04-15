@@ -1,4 +1,15 @@
+#Prerequisites
+1. Enable the Gameplay Ability System Plugin in the Edit -> Plugins window.
+![Image](img/GameplayAbilitySystem_Plugin_00.jpg)
+2. To get the full range of capabilities of this system, add "GameplayAbilities", "GameplayTags", and "GameplayTasks" to PublicDependencyModuleNames in your project's "(ProjectName).Build.cs" file.
+
+To use the Gameplay Ability System, add the three module names anywhere in the braced list, as follows: 
+```
+PublicDependencyModuleNames.AddRange(new string[] { "GameplayAbilities", "GameplayTags", "GameplayTasks" });
+```
 #Basic Setup
+
+![type:video](https://www.youtube.com/embed/R66iJSezpEA)
 
 1. Reparent your character class to CommonModularCharacter.h
 2. Reparent your player controller class to CommonModularPlayerController.h

@@ -1,6 +1,5 @@
 #Installation
 
-Product Overview
 ![type:video](https://www.youtube.com/embed/R66iJSezpEA)
 
 # As a project plugin*
@@ -10,9 +9,9 @@ Product Overview
 4. Right click on you .uproject and generate visual studio project file
 5. Click your .sln and build your project target
 6. Start your project
-7. Enable it in your project’s plugins by ``Edit->Plugins->CreationArtTools``
+7. Enable it in your project’s plugins by ``Edit->Plugins->CommonGAS``
 
 # As a Engine plugin*
 1. Download the plugin from the [Unreal Engine’s Marketplace](https://www.unrealengine.com/marketplace/en-US/product/common-gas)
 2. Start your Project
-3. Enable it in your project’s plugins by ``Edit->Plugins->CreationArtTools``
+3. Enable it in your project’s plugins by ``Edit->Plugins->CommonGAS``

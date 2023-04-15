@@ -1,3 +1,8 @@
-# Common Modular GameMode
 
-## Class Defaults
+## ACommonModularGameModeBase
+
+Pair this with a CommonModularGameStateBase
+
+## ACommonModularGameMode
+
+Pair this with a CommonModularGameState
