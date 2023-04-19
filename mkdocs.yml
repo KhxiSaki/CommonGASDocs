@@ -43,6 +43,7 @@ nav:
        - 'Installation' :  'installation.md'
        - 'Setup' :  'setup.md'
        - 'Tutorials' :  'tutorials.md'
+       - 'Changelog' : 'changelog.md'
 
     - 'ModularGameplayActors': 
        - 'Common Modular Character': 'commonmodularcharacter.md'
@@ -57,9 +58,7 @@ nav:
         - 'CommonGameplayAbility': 'commongameplayability.md'
         - 'Common Ability Set' : 'commonabilityset.md'
         - 'Common Ability Tag Relationship Mapping' : 'commonabilitytagrelationshipmapping.md'
-        - 'Common Ability Types' : 'commonabilitytypes.md'
         - 'Common Gameplay Tags' : 'commongameplaytag.md'
-        - 'Common Target Type' : 'commontargettype.md'
         - 'CommonAbilitySystemComponent': 'commonabilitysystemcomponent.md'
         - 'CommonExtensionComponent': 'commonextensioncomponent.md'
         - 'CommonAbilityQueueComponent': 'commonabilityqueuecomponent.md'
@@ -86,8 +85,6 @@ nav:
     - 'GameFeatures':
       - 'GameFeatureAction_AddAbilities': 'gamefeatureaction_addabilities.md'
       - 'GameFeatureAction_AddInputContextMapping': 'gamefeatureaction_addinputcontextmapping.md'
-      - 'GameFeatureAction_AddWorldSystem': 'gamefeatureaction_addworldsystem.md'
-      - 'GameFeatureAction_WorldActionBase': 'gamefeatureaction_worldactionbase.md'
 
     - 'Messaging':
        - 'GameplayMessageRouter' : 'gameplaymessagerouter.md'

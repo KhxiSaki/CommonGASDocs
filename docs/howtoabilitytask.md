@@ -1,4 +1,4 @@
-#What is a Gameplay Ability?
+#What is a Ability Task?
 
 Ability Tasks (C++ class UAbilityTask) are a specialized form of the more general Gameplay Task class intended to work with Gameplay Abilities. Games that use the Gameplay Ability System usually include a variety of custom Ability Tasks which implement their unique gameplay features. They perform asynchronous work during a Gameplay Ability's execution, and have the capability to affect execution flow by calling Delegates (in native C++ code) or moving through one or more output execution pins (in Blueprints). This enables Abilities to execute across multiple frames, and to perform several distinct functions in the same frame. Most Ability Tasks have an execution pin that fires immediately, enabling Blueprint execution to continue after starting a Task. In addition, there are often task-specific pins that will fire after a delay, or following a certain event that may or may not happen.
 

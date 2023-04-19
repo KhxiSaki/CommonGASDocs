@@ -2,6 +2,17 @@
 
 A Gameplay Ability is an ingame action that an Actor can own and trigger repeatedly. Common examples include spells, special attacks, or effects triggered by items. This concept is very common in video games, so much so it is often taken for granted, though the processes involved in running an ability are often complex and require specific timing. For example, while coding an attack activation is fairly simple in itself, over the course of a long-term project the complexity of building abilities can explode as you add resource costs, buff or debuff effects to add or remove from players, combo systems, and other details. As such, there are three major considerations involved in how Unreal Engine's Gameplay Ability System is designed. 
 
+GameplayAbilities run on the owning client and/or the server depending on the Net Execution Policy but not simulated proxies. The Net Execution Policy determines if a GameplayAbility will be locally predicted. They include default behavior for optional cost and cooldown GameplayEffects. GameplayAbilities use AbilityTasks for actions that happen over time like waiting for an event, waiting for an attribute change, waiting for players to choose a target, or moving a Character with Root Motion Source. Simulated clients will not run GameplayAbilities. Instead, when the server runs the ability, anything that visually needs to play on the simulated proxies (like animation montages) will be replicated or RPC'd through AbilityTasks or GameplayCues for cosmetic things like sounds and particles.
+
+All GameplayAbilities will have their ActivateAbility() function overriden with your gameplay logic. Additional logic can be added to EndAbility() that runs when the GameplayAbility completes or is canceled.
+
+Flowchart of a simple GameplayAbility: 
+![Image](img/abilityflowchartsimple.png)
+
+Flowchart of a more complex GameplayAbility: 
+![Image](img/abilityflowchartcomplex.png)
+
+[GASDocumentation](https://github.com/tranek/GASDocumentation#concepts-ga)
 ## Coordinating an Ability's Execution
 
 An ability must be able to interact with multiple different systems during its execution, with specific timing. These interactions can include:

@@ -1,1 +1,1 @@
-test
+GameFeatureAction responsible for granting abilities (and attributes) to actors of a specified type.
