@@ -55,6 +55,7 @@ nav:
 
     - 'Gameplay Abilities':
         - 'How-to Gameplay Ability': 'howtogameplayability.md'
+        - 'Console Commands': 'consolecommands.md'
         - 'CommonGameplayAbility': 'commongameplayability.md'
         - 'Common Ability Set' : 'commonabilityset.md'
         - 'Common Ability Tag Relationship Mapping' : 'commonabilitytagrelationshipmapping.md'
@@ -72,8 +73,7 @@ nav:
       - 'CommonGameplayEffectLibrary' : 'commongameplayeffectlibrary.md'
 
     - 'Artificial Intelligence':
-      - 'State Tree': 'StateTree.md'
-      - 'AIModule': 'aimodule.md'
+      - 'How to AI': 'aimodule.md'
 
     - 'Gameplay Tasks':
       - 'How-to AbilityTask': 'howtoabilitytask.md'
@@ -83,6 +83,7 @@ nav:
       - 'CommonAnimInstance': 'commonaniminstance.md'
 
     - 'GameFeatures':
+      - 'What is Game Features': 'whatisgamefeatures.md'
       - 'GameFeatureAction_AddAbilities': 'gamefeatureaction_addabilities.md'
       - 'GameFeatureAction_AddInputContextMapping': 'gamefeatureaction_addinputcontextmapping.md'
 
@@ -92,12 +93,6 @@ nav:
        - 'AsyncAction_ListenForGameplayMessage' : 'asyncaction_listenforgameplaymessage.md'
        - 'GameplayMessageSubsystem' : 'gameplaymessagesubsystem.md'
        - 'GameplayMessageTypes2' : 'gameplaymessagetypes2.md'
-
-    - 'Input':
-       - 'CommonAbilityInputBindingComponent' : 'commonabilityinputbindingcomponent.md'
-       - 'CommonEnhancedInputComponent' : 'commonenhancedinputcomponent.md'
-       - 'CommonInputConfig' : 'commoninputconfig.md'
-       - 'CommonPlayerControlsComponent' : 'commonplayercontrolscomponent.md'
 
 # Plugins
 plugins:
