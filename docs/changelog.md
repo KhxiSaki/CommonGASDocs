@@ -14,3 +14,4 @@
 - Add CommonGASEditor Modules with new asset types for Common  classes and factory for custom CommonGAS category(New)
 - Remove InputMappingContext and Input Priority from AbilityInputBindingComponent as this interaction being replaced by InputMappingData (Bugfixes)
 - UAbilitySystemLibrary GameplayTags operation doesnt execute (bugfixes)
+- Redo UGameplayCueFunction Library implemetations (Bugfixes)
