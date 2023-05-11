@@ -15,3 +15,11 @@
 - Remove InputMappingContext and Input Priority from AbilityInputBindingComponent as this interaction being replaced by InputMappingData (Bugfixes)
 - UAbilitySystemLibrary GameplayTags operation doesnt execute (bugfixes)
 - Redo UGameplayCueFunction Library implemetations (Bugfixes)
+
+## 1.1.02 (Unreal Engine 5.2.0)
+- Fix undefined type 'USkeletalMeshComponent in CommonAbilitySystemComponent
+- Fix 'AnimLayers': references must be initialized
+- Fix use of undefined type 'FAnimMontageInstance'
+- Clean up unused includes and forwards declarations
+- Remove CommonInputComponent
+- Fix use of undefined type 'APlayerController' in CommmonModularCharacter
