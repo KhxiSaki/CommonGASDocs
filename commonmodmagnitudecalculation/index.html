@@ -1,0 +1,2287 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../commonattributeset/">
+      
+      
+        <link rel="next" href="../commongameplayeffectlibrary/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+    
+    
+      
+        <title>CommonModMagnitudeCalculation - CommonGAS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-modmagnitudecalculation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CommonGAS" class="md-header__button md-logo" aria-label="CommonGAS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CommonGAS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CommonModMagnitudeCalculation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../commonmodularcharacter/" class="md-tabs__link">
+        ModularGameplayActors
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../howtogameplayability/" class="md-tabs__link">
+        Gameplay Abilities
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../attributes/" class="md-tabs__link md-tabs__link--active">
+        Gameplay Effects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../aimodule/" class="md-tabs__link">
+        Artificial Intelligence
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../howtoabilitytask/" class="md-tabs__link">
+        Gameplay Tasks
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../commonaniminstance/" class="md-tabs__link">
+        Animation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../whatisgamefeatures/" class="md-tabs__link">
+        GameFeatures
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gameplaymessagerouter/" class="md-tabs__link">
+        Messaging
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CommonGAS" class="md-nav__button md-logo" aria-label="CommonGAS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CommonGAS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          ModularGameplayActors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          ModularGameplayActors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonmodularcharacter/" class="md-nav__link">
+        Common Modular Character
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonmodularpawn/" class="md-nav__link">
+        Common Modular Pawn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonmodularplayercontroller/" class="md-nav__link">
+        Common Modular Player Controller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonmodularaicontroller/" class="md-nav__link">
+        Common Modular AI Controller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonmodularactor/" class="md-nav__link">
+        Common Modular Actor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonmodularplayerstate/" class="md-nav__link">
+        Common Modular PlayerState
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Gameplay Abilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Gameplay Abilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howtogameplayability/" class="md-nav__link">
+        How-to Gameplay Ability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consolecommands/" class="md-nav__link">
+        Console Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commongameplayability/" class="md-nav__link">
+        CommonGameplayAbility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonabilityset/" class="md-nav__link">
+        Common Ability Set
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonabilitytagrelationshipmapping/" class="md-nav__link">
+        Common Ability Tag Relationship Mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commongameplaytag/" class="md-nav__link">
+        Common Gameplay Tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonabilitysystemcomponent/" class="md-nav__link">
+        CommonAbilitySystemComponent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonextensioncomponent/" class="md-nav__link">
+        CommonExtensionComponent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonabilityqueuecomponent/" class="md-nav__link">
+        CommonAbilityQueueComponent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonabilitysystemlibrary/" class="md-nav__link">
+        CommonAbilitySystemLibrary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commongameplaytaglibrary/" class="md-nav__link">
+        CommonGameplayTagLibrary
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Gameplay Effects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Gameplay Effects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../attributes/" class="md-nav__link">
+        How to use AttributeSet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonattributeset/" class="md-nav__link">
+        Common Attribute Set
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CommonModMagnitudeCalculation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CommonModMagnitudeCalculation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-modmagnitudecalculation" class="md-nav__link">
+    What is ModMagnitudeCalculation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cblueprint-api" class="md-nav__link">
+    C++/Blueprint API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getcapturedattributemagnitude" class="md-nav__link">
+    GetCapturedAttributeMagnitude``
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getsetbycallermagnitudebytag" class="md-nav__link">
+    GetSetByCallerMagnitudeByTag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commongetsetbycallermagnitudebyname" class="md-nav__link">
+    CommonGetSetByCallerMagnitudeByName
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commongetsourceaggregatedtags" class="md-nav__link">
+    CommonGetSourceAggregatedTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commongetsourceactortags" class="md-nav__link">
+    CommonGetSourceActorTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commongettargetaggregatedtags" class="md-nav__link">
+    CommonGetTargetAggregatedTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commongettargetactortags" class="md-nav__link">
+    CommonGetTargetActorTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commongettargetspectags" class="md-nav__link">
+    CommonGetTargetSpecTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fgameplayeffectspec" class="md-nav__link">
+    FGameplayEffectSpec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hasvalidcapturedattributes" class="md-nav__link">
+    HasValidCapturedAttributes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attemptcalculatedurationfromdef" class="md-nav__link">
+    AttemptCalculateDurationFromDef
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspecduration" class="md-nav__link">
+    GetSpecDuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspecperiod" class="md-nav__link">
+    GetSpecPeriod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspecchancetoapplytotarget" class="md-nav__link">
+    GetSpecChanceToApplyToTarget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspecallgrantedtags" class="md-nav__link">
+    GetSpecAllGrantedTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspecallblockedabilitytags" class="md-nav__link">
+    GetSpecAllBlockedAbilityTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspecallassettags" class="md-nav__link">
+    GetSpecAllAssetTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspeclevel" class="md-nav__link">
+    GetSpecLevel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capturespecattributedatafromtarget" class="md-nav__link">
+    CaptureSpecAttributeDataFromTarget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getspecmodifiermagnitude" class="md-nav__link">
+    GetSpecModifierMagnitude
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recapturespecsourceactortags" class="md-nav__link">
+    RecaptureSpecSourceActorTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setupspecattributecapturedefinitions" class="md-nav__link">
+    SetupSpecAttributeCaptureDefinitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculatespecmodifiedduration" class="md-nav__link">
+    CalculateSpecModifiedDuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adddynamicassettag" class="md-nav__link">
+    AddDynamicAssetTag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appenddynamicassettags" class="md-nav__link">
+    AppendDynamicAssetTags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getdynamicassettags" class="md-nav__link">
+    GetDynamicAssetTags
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commongameplayeffectlibrary/" class="md-nav__link">
+        CommonGameplayEffectLibrary
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Artificial Intelligence
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Artificial Intelligence
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aimodule/" class="md-nav__link">
+        How to AI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Gameplay Tasks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Gameplay Tasks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../howtoabilitytask/" class="md-nav__link">
+        How-to AbilityTask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playmontageandwaitforevent/" class="md-nav__link">
+        PlayMontageAndWaitForEvent
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Animation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Animation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commonaniminstance/" class="md-nav__link">
+        CommonAnimInstance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          GameFeatures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          GameFeatures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatisgamefeatures/" class="md-nav__link">
+        What is Game Features
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamefeatureaction_addabilities/" class="md-nav__link">
+        GameFeatureAction_AddAbilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamefeatureaction_addinputcontextmapping/" class="md-nav__link">
+        GameFeatureAction_AddInputContextMapping
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          Messaging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Messaging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gameplaymessagerouter/" class="md-nav__link">
+        GameplayMessageRouter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gameplaymessageprocessor/" class="md-nav__link">
+        GameplayMessageProcessor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asyncaction_listenforgameplaymessage/" class="md-nav__link">
+        AsyncAction_ListenForGameplayMessage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gameplaymessagesubsystem/" class="md-nav__link">
+        GameplayMessageSubsystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gameplaymessagetypes2/" class="md-nav__link">
+        GameplayMessageTypes2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>CommonModMagnitudeCalculation</h1>
+
+<div><h2 id="what-is-modmagnitudecalculation">What is ModMagnitudeCalculation</h2>
+<p>ModifierMagnitudeCalculations (ModMagCalc or MMC) are powerful classes used as Modifiers in GameplayEffects. They function similarly to GameplayEffectExecutionCalculations but are less powerful and most importantly they can be predicted. Their sole purpose is to return a float value from CalculateBaseMagnitude_Implementation(). You can subclass and override this function in Blueprint and C++.</p>
+<p>MMCs can be used in any duration of GameplayEffects - Instant, Duration, Infinite, or Periodic.</p>
+<p>MMCs' strength lies in their capability to capture the value of any number of Attributes on the Source or the Target of GameplayEffect with full access to the GameplayEffectSpec to read GameplayTags and SetByCallers. Attributes can either be snapshotted or not. Snapshotted Attributes are captured when the GameplayEffectSpec is created whereas non snapshotted Attributes are captured when the GameplayEffectSpec is applied and automatically update when the Attribute changes for Infinite and Duration GameplayEffects. Capturing Attributes recalculates their CurrentValue from existing mods on the ASC. This recalculation will not run PreAttributeChange() in the AbilitySet so any clamping must be done here again.</p>
+<table>
+<thead>
+<tr>
+<th>Snapshot</th>
+<th>Source or Target</th>
+<th>Captured on GameplayEffectSpec</th>
+<th>Automatically updates when Attribute changes for Infinite or Duration GE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yes</td>
+<td>Source</td>
+<td>Creation</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Yes</td>
+<td>Target</td>
+<td>Application</td>
+<td>No</td>
+</tr>
+<tr>
+<td>No</td>
+<td>Source</td>
+<td>Application</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>No</td>
+<td>Target</td>
+<td>Application</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>The resultant float from an MMC can further be modified in the GameplayEffect's Modifier by a coefficient and a pre and post coefficient addition.</p>
+<p>An example MMC that captures the Target's mana Attribute reduces it from a poison effect where the amount reduced changes depending on how much mana the Target has and a tag that the Target might have:</p>
+<pre><code>
+UPAMMC_PoisonMana::UPAMMC_PoisonMana()
+{
+
+    //ManaDef defined in header FGameplayEffectAttributeCaptureDefinition ManaDef;
+    ManaDef.AttributeToCapture = UPAAttributeSetBase::GetManaAttribute();
+    ManaDef.AttributeSource = EGameplayEffectAttributeCaptureSource::Target;
+    ManaDef.bSnapshot = false;
+
+    //MaxManaDef defined in header FGameplayEffectAttributeCaptureDefinition MaxManaDef;
+    MaxManaDef.AttributeToCapture = UPAAttributeSetBase::GetMaxManaAttribute();
+    MaxManaDef.AttributeSource = EGameplayEffectAttributeCaptureSource::Target;
+    MaxManaDef.bSnapshot = false;
+
+    RelevantAttributesToCapture.Add(ManaDef);
+    RelevantAttributesToCapture.Add(MaxManaDef);
+}
+
+float UPAMMC_PoisonMana::CalculateBaseMagnitude_Implementation(const FGameplayEffectSpec &amp; Spec) const
+{
+    // Gather the tags from the source and target as that can affect which buffs should be used
+    const FGameplayTagContainer* SourceTags = Spec.CapturedSourceTags.GetAggregatedTags();
+    const FGameplayTagContainer* TargetTags = Spec.CapturedTargetTags.GetAggregatedTags();
+
+    FAggregatorEvaluateParameters EvaluationParameters;
+    EvaluationParameters.SourceTags = SourceTags;
+    EvaluationParameters.TargetTags = TargetTags;
+
+    float Mana = 0.f;
+    GetCapturedAttributeMagnitude(ManaDef, Spec, EvaluationParameters, Mana);
+    Mana = FMath::Max&lt;float&gt;(Mana, 0.0f);
+
+    float MaxMana = 0.f;
+    GetCapturedAttributeMagnitude(MaxManaDef, Spec, EvaluationParameters, MaxMana);
+    MaxMana = FMath::Max&lt;float&gt;(MaxMana, 1.0f); // Avoid divide by zero
+
+    float Reduction = -20.0f;
+    if (Mana / MaxMana &gt; 0.5f)
+    {
+        // Double the effect if the target has more than half their mana
+        Reduction *= 2;
+    }
+
+    if (TargetTags-&gt;HasTagExact(FGameplayTag::RequestGameplayTag(FName("Status.WeakToPoisonMana"))))
+    {
+        // Double the effect if the target is weak to PoisonMana
+        Reduction *= 2;
+    }
+
+    return Reduction;
+}
+
+</code></pre>
+<p>If you don't add the FGameplayEffectAttributeCaptureDefinition to RelevantAttributesToCapture in the MMC's constructor and try to capture Attributes, you will get an error about a missing Spec while capturing. If you don't need to capture Attributes, then you don't have to add anything to RelevantAttributesToCapture.</p>
+<p><a href="https://github.com/tranek/GASDocumentation#concepts-ge-mmc">GASDocumentation</a></p>
+<p>Note:</p>
+<pre><code>Currently this class is being use with Common Pre_ and Sub_ prefix is because in default MMC, Epic
+made a mistake of not making all BlueprintCallable functions const so this class is being use for that
+
+(This will be remove in the future once Epic fix that issue)
+</code></pre>
+<h2 id="cblueprint-api">C++/Blueprint API</h2>
+<h2 id="getcapturedattributemagnitude">GetCapturedAttributeMagnitude``</h2>
+<p>Gets the captured magnitude value for the given Attribute</p>
+<p>For this to work correctly, the Attribute needs to be added to the Relevant Attributes to Capture array</p>
+<p>C++:</p>
+<p><code>K2_CommonGetCapturedAttributeMagnitude</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetCapturedAttributeMagnitude</code></p>
+<p><img alt="Image" src="../img/commongetcapturedattributemagnitude.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>Attribute (Input)</td>
+<td>The attribute to query</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>The magnitude value if found, zero otherwise</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getsetbycallermagnitudebytag">GetSetByCallerMagnitudeByTag</h2>
+<p>Extracts the Set by Caller Magnitude from a Gameplay Effect Spec</p>
+<p>C++:</p>
+<p><code>CommonGetSetByCallerMagnitudeByTag</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetSetByCallerMagnitudeByTag</code></p>
+<p><img alt="Image" src="../img/commongetsetbycallermagnitudebytag.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>Tag (Input)</td>
+<td>The effect tag to query</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>The magnitude value if found, zero</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commongetsetbycallermagnitudebyname">CommonGetSetByCallerMagnitudeByName</h2>
+<p>Extracts the Set by Caller Magnitude from a Gameplay Effect Spec</p>
+<p>C++:</p>
+<p><code>CommonGetSetByCallerMagnitudeByName</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetSetByCallerMagnitudeByName</code></p>
+<p><img alt="Image" src="../img/commongetsetbycallermagnitudebyname.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>MagnitudeName (Input)</td>
+<td>The effect name to query</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>The magnitude value if found, zero</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commongetsourceaggregatedtags">CommonGetSourceAggregatedTags</h2>
+<p>Copies and returns the source aggregated tags from a Gameplay Effect Spec
+C++:</p>
+<p><code>CommonGetSourceAggregatedTags</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetSourceAggregatedTags</code></p>
+<p><img alt="Image" src="../img/commongetsourceaggregratedtags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Gameplay Tag Container with the copied tags. The container will be empty if no captured source tags exist</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commongetsourceactortags">CommonGetSourceActorTags</h2>
+<p>Returns the source actor tags from a Gameplay Effect Spec</p>
+<p>C++:</p>
+<p><code>CommonGetSourceActorTags</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetSourceActorTags</code></p>
+<p><img alt="Image" src="../img/commongetsourceactortags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Gameplay Tag Container with the copied tags. The container will be empty if no captured source tags exist.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commongettargetaggregatedtags">CommonGetTargetAggregatedTags</h2>
+<p>Copies and returns the target aggregated tags from a Gameplay Effect Spec</p>
+<p>C++:</p>
+<p><code>CommonGetTargetAggregatedTags</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetTargetAggregatedTags</code></p>
+<p><img alt="Image" src="../img/CommonGetTargetAggregatedTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Gameplay Tag Container with the copied tags. The container will be empty if no captured source tags exist.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commongettargetactortags">CommonGetTargetActorTags</h2>
+<p>Returns the target actor tags from a Gameplay Effect Spec
+Useful for Modifier Magnitude Calculations</p>
+<p>C++:</p>
+<p><code>CommonGetTargetActorTags</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetTargetActorTags</code></p>
+<p><img alt="Image" src="../img/CommonGetTargetActorTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Gameplay Tag Container with the copied tags. The container will be empty if no captured source tags exist.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commongettargetspectags">CommonGetTargetSpecTags</h2>
+<p>Returns the target spec tags from a Gameplay Effect Spec
+Useful for Modifier Magnitude Calculations</p>
+<p>C++:</p>
+<p><code>CommonGetTargetSpecTags</code></p>
+<p>Blueprint:</p>
+<p><code>CommonGetTargetSpecTags</code></p>
+<p><img alt="Image" src="../img/CommonGetTargetSpecTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EffectSpec (Input)</td>
+<td>The Gameplay Effect Spec to get the info from</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Gameplay Tag Container with the copied tags. The container will be empty if no captured source tags exist.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fgameplayeffectspec">FGameplayEffectSpec</h2>
+<p>Tells us:</p>
+<ul>
+<li>What UGameplayEffect (const data)</li>
+<li>What Level</li>
+<li>Who instigated</li>
+</ul>
+<p>Note:</p>
+<p><code>I exposed this functionality just so designer can have these functions if they want some speficic modification be done in blueprint but i recommend use FGameplayEffectSpec functions for calculations and modifications in c++ for better control.</code></p>
+<p><code>Its very rarely you need to use some of these functions in blueprint but i exposed them if you ever needed to</code></p>
+<h2 id="hasvalidcapturedattributes">HasValidCapturedAttributes</h2>
+<p>Determines if the spec has capture specs with valid captures for all of the specified definitions.</p>
+<p>C++:</p>
+<p><code>HasValidCapturedAttributes</code></p>
+<p>Blueprint:</p>
+<p><code>HasValidCapturedAttributes</code></p>
+<p><img alt="Image" src="../img/HasValidCapturedAttributes.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InCaptureDefsToCheck (Input)</td>
+<td>Capture definitions to check for</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>True if the container has valid capture attributes for all of the specified definitions, false if it does not</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attemptcalculatedurationfromdef">AttemptCalculateDurationFromDef</h2>
+<p>Helper function to attempt to calculate the duration of the spec from its GE definition</p>
+<p>C++:</p>
+<p><code>AttemptCalculateDurationFromDef</code></p>
+<p>Blueprint:</p>
+<p><code>AttemptCalculateDurationFromDef</code></p>
+<p><img alt="Image" src="../img/AttemptCalculateDurationFromDef.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OutDefDuration (Input)</td>
+<td>Computed duration of the spec from its GE definition; Not the actual duration of the spec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>True if the container has valid capture attributes for all of the specified definitions, false if it does not</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspecduration">GetSpecDuration</h2>
+<p>C++:</p>
+<p><code>GetSpecDuration</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecDuration</code></p>
+<p><img alt="Image" src="../img/getspecduration.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Float</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspecperiod">GetSpecPeriod</h2>
+<p>C++:</p>
+<p><code>GetSpecPeriod</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecPeriod</code></p>
+<p><img alt="Image" src="../img/getspecperiod.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Float</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspecchancetoapplytotarget">GetSpecChanceToApplyToTarget</h2>
+<p>C++:</p>
+<p><code>GetSpecChanceToApplyToTarget</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecChanceToApplyToTarget</code></p>
+<p><img alt="Image" src="../img/GetSpecChanceToApplyToTarget.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Float</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspecallgrantedtags">GetSpecAllGrantedTags</h2>
+<p>C++:</p>
+<p><code>GetSpecAllGrantedTags</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecAllGrantedTags</code></p>
+<p><img alt="Image" src="../img/GetSpecAllGrantedTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectContainer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspecallblockedabilitytags">GetSpecAllBlockedAbilityTags</h2>
+<p>C++:</p>
+<p><code>GetSpecAllBlockedAbilityTags</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecAllBlockedAbilityTags</code></p>
+<p><img alt="Image" src="../img/GetSpecAllBlockedAbilityTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectContainer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspecallassettags">GetSpecAllAssetTags</h2>
+<p>C++:</p>
+<p><code>GetSpecAllAssetTags</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecAllAssetTags</code></p>
+<p><img alt="Image" src="../img/GetSpecAllAssetTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectContainer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspeclevel">GetSpecLevel</h2>
+<p>C++:</p>
+<p><code>GetSpecLevel</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecLevel</code></p>
+<p><img alt="Image" src="../img/GetSpecLevel.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>float</td>
+</tr>
+</tbody>
+</table>
+<h2 id="capturespecattributedatafromtarget">CaptureSpecAttributeDataFromTarget</h2>
+<p>C++:</p>
+<p><code>CaptureSpecAttributeDataFromTarget</code></p>
+<p>Blueprint:</p>
+<p><code>CaptureSpecAttributeDataFromTarget</code></p>
+<p><img alt="Image" src="../img/CaptureSpecAttributeDataFromTarget.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target AbilitySystemComponent (Input)</td>
+<td>UAbilitySystemComponent</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getspecmodifiermagnitude">GetSpecModifierMagnitude</h2>
+<p>Get the computed magnitude of the modifier on the spec with the specified index</p>
+<p>C++:</p>
+<p><code>GetSpecModifierMagnitude</code></p>
+<p>Blueprint:</p>
+<p><code>GetSpecModifierMagnitude</code></p>
+<p><img alt="Image" src="../img/GetSpecModifierMagnitude.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ModifierIndx (Input)</td>
+<td>Modifier to get</td>
+</tr>
+<tr>
+<td>bFactorInStackCount (Input)</td>
+<td>If true, the calculation will include the stack count</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Computed magnitude</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recapturespecsourceactortags">RecaptureSpecSourceActorTags</h2>
+<p>Recaptures source actor tags of this spec without modifying anything else</p>
+<p>C++:</p>
+<p><code>RecaptureSpecSourceActorTags</code></p>
+<p>Blueprint:</p>
+<p><code>RecaptureSpecSourceActorTags</code></p>
+<p><img alt="Image" src="../img/RecaptureSpecSourceActorTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setupspecattributecapturedefinitions">SetupSpecAttributeCaptureDefinitions</h2>
+<p>Helper function to initialize all of the capture definitions required by the spec</p>
+<p>C++:</p>
+<p><code>SetupSpecAttributeCaptureDefinitions</code></p>
+<p>Blueprint:</p>
+<p><code>SetupSpecAttributeCaptureDefinitions</code></p>
+<p><img alt="Image" src="../img/SetupSpecAttributeCaptureDefinitions.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+</tbody>
+</table>
+<h2 id="calculatespecmodifiedduration">CalculateSpecModifiedDuration</h2>
+<p>Helper function that returns the duration after applying relevant modifiers from the source and target ability system components</p>
+<p>C++:</p>
+<p><code>CalculateSpecModifiedDuration</code></p>
+<p>Blueprint:</p>
+<p><code>CalculateSpecModifiedDuration</code></p>
+<p><img alt="Image" src="../img/CalculateSpecModifiedDuration.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>Float</td>
+</tr>
+</tbody>
+</table>
+<h2 id="adddynamicassettag">AddDynamicAssetTag</h2>
+<p>Dynamically add an asset tag not originally from the source GE definition; Added to DynamicAssetTags as well as injected into the captured source spec tags</p>
+<p>C++:</p>
+<p><code>AddDynamicAssetTag</code></p>
+<p>Blueprint:</p>
+<p><code>AddDynamicAssetTag</code></p>
+<p><img alt="Image" src="../img/AddDynamicAssetTag.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TagToAdd (Input)</td>
+<td>FGameplayTag</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appenddynamicassettags">AppendDynamicAssetTags</h2>
+<p>Dynamically append asset tags not originally from the source GE definition; Added to DynamicAssetTags as well as injected into the captured source spec tags</p>
+<p>C++:</p>
+<p><code>AppendDynamicAssetTags</code></p>
+<p>Blueprint:</p>
+<p><code>AppendDynamicAssetTags</code></p>
+<p><img alt="Image" src="../img/AppendDynamicAssetTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TagToAppend (Input)</td>
+<td>FGameplayTagContainer</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getdynamicassettags">GetDynamicAssetTags</h2>
+<p>C++:</p>
+<p><code>GetDynamicAssetTags</code></p>
+<p>Blueprint:</p>
+<p><code>GetDynamicAssetTags</code></p>
+<p><img alt="Image" src="../img/GetDynamicAssetTags.png"></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec (Input)</td>
+<td>FGameplayEffectSpec</td>
+</tr>
+<tr>
+<td>Return Value (Output)</td>
+<td>FGameplayTagContainer</td>
+</tr>
+</tbody>
+</table></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/KhxiSaki"  target="_blank" rel="noopener">CreationArtStudios</a> 
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/SgXJJsja67" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@creationartstudios8279" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+    
+  </body>
+</html>
